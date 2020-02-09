@@ -75,27 +75,7 @@ public class Entitlement {
         this.accountId = accountId;
     }
 
-//    public String getOperations() {
-//        return operations;
-//    }
-//
-//    public void setOperations(String operations) {
-//        this.operations = operations;
-//    }
+
     private List<Operation> operations;
 
-
-//    @Override
-//    public boolean equals(Object o) {
-//        if (this == o) return true;
-//        if (o == null || getClass() != o.getClass()) return false;
-//        Entitlement that = (Entitlement) o;
-//        return Objects.equals(accountId, that.accountId) &&
-//                Objects.equals(operations, that.operations);
-//    }
-//
-//    @Override
-//    public int hashCode() {
-//        return Objects.hash(accountId, operations);
-//    }
 }

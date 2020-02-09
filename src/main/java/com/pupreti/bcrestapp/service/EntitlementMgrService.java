@@ -38,9 +38,7 @@ public class EntitlementMgrService implements IEntitlementMgr {
 
         File file = null;
 
-        System.out.println("test1");
         Resource resource = new ClassPathResource("classpath:user_entitlements.json");
-        System.out.println("test1.1");
         try {
             InputStream inputStream = resource.getInputStream();
             mapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
@@ -60,10 +58,9 @@ public class EntitlementMgrService implements IEntitlementMgr {
         Boolean hasAccess = false;
         List<Entitlement> userEntitlement = getMasterUser().get(userId);
         if (userEntitlement != null && !userEntitlement.isEmpty()) {
-            System.out.println("inside userEntitlement " + userEntitlement);
             hasAccess = isEntitled(userEntitlement, authReq);
         } else {
-            System.out.println("not found: " + hasAccess);
+            System.out.println("entitlement for user not found:");
         }
         return hasAccess;
     }

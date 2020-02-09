@@ -4,11 +4,6 @@ import java.util.List;
 
 public class Operation {
 
-//    public Operation(String action, List<String> resources) {
-//        this.action = action;
-//        this.resources = resources;
-//    }
-
     public List<String> getResources() {
             return resources;
         }
