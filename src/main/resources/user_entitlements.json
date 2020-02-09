@@ -1,0 +1,299 @@
+﻿[
+  {
+    "userId": "user001",
+    "entitlements": [
+      {
+        "accountId": "account001",
+        "operations": [
+          {
+            "action": "READ",
+            "resources": [
+              "video",
+              "playlist"
+            ]
+          },
+          {
+            "action": "write",
+            "resources": [
+              "video"
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "account005",
+        "operations": [
+          {
+            "action": "WRITE",
+            "resources": [
+              "video"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "userId": "user002",
+    "entitlements": [
+      {
+        "accountId": "account002",
+        "operations": [
+          {
+            "action": "READ",
+            "resources": [
+              "video",
+              "metadata"
+            ]
+          },
+          {
+            "action": "write",
+            "resources": [
+              "playlist"
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "account003",
+        "operations": [
+          {
+            "action": "WRITE",
+            "resources": [
+              "video"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "userId": "user003",
+    "entitlements": [
+      {
+        "accountId": "account002",
+        "operations": [
+          {
+            "action": "READ",
+            "resources": [
+              "video",
+              "playlist"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "userId": "user004",
+    "entitlements": [
+      {
+        "accountId": "account001",
+        "operations": [
+          {
+            "action": "READ",
+            "resources": [
+              "video",
+              "playlist"
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "account002",
+        "operations": [
+          {
+            "action": "READ",
+            "resources": [
+              "video",
+              "playlist"
+            ]
+          },
+          {
+            "action": "WRITE",
+            "resources": [
+              "metadata",
+              "playlist"
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "account003",
+        "operations": [
+          {
+            "action": "READ",
+            "resources": [
+              "video",
+              "playlist"
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "account005",
+        "operations": [
+          {
+            "action": "WRITE",
+            "resources": [
+              "video",
+              "playlist"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "userId": "user005",
+    "entitlements": [
+      {
+        "accountId": "account001",
+        "operations": [
+          {
+            "action": "READ",
+            "resources": [
+              "video",
+              "playlist"
+            ]
+          },
+          {
+            "action": "write",
+            "resources": [
+              "video"
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "account005",
+        "operations": [
+          {
+            "action": "WRITE",
+            "resources": [
+              "video",
+              "playlist"
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "account003",
+        "operations": [
+          {
+            "action": "READ",
+            "resources": [
+              "video",
+              "playlist"
+            ]
+          },
+          {
+            "action": "WRITE",
+            "resources": [
+              "metadata",
+              "video"
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "account009",
+        "operations": [
+          {
+            "action": "READ",
+            "resources": [
+              "metadata",
+              "video",
+              "playlist"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "userId": "user006",
+    "entitlements": [
+      {
+        "accountId": "account003",
+        "operations": [
+          {
+            "action": "READ",
+            "resources": [
+              "video",
+              "playlist"
+            ]
+          },
+          {
+            "action": "write",
+            "resources": [
+              "video"
+            ]
+          }
+        ]
+      },
+      {
+        "accountId": "account005",
+        "operations": [
+          {
+            "action": "WRITE",
+            "resources": [
+              "video",
+              "playlist"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "userId": "user007",
+    "entitlements": [
+      {
+        "accountId": "account001",
+        "operations": []
+      },
+      {
+        "accountId": "account005",
+        "operations": [
+          {
+            "action": "WRITE",
+            "resources": [
+              "video",
+              "playlist"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "userId": "user008",
+    "entitlements": []
+  },
+  {
+    "userId": "user009",
+    "entitlements": [
+      {
+        "accountId": "account001",
+        "operations": null
+      },
+      {
+        "accountId": "account002",
+        "operations": [
+          {
+            "action": "WRITE",
+            "resources": [
+              "video",
+              "playlist"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "userId": "user010",
+    "entitlements": null
+  }
+]
