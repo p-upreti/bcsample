@@ -12,6 +12,7 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Value;
 
 import javax.annotation.PostConstruct;
 import java.io.File;
@@ -22,12 +23,13 @@ import java.util.*;
 @Service
 public class EntitlementMgrService implements IEntitlementMgr {
 
-//    private Set<User> masterUsers;
-
     private Map<String, List<Entitlement>> masterUser;
 
     @Autowired
     ResourceLoader resourceLoader;
+
+    @Value("classpath:user_entitlements.json")
+    Resource resourceFile;
 
     @PostConstruct
     public void init() {
@@ -36,11 +38,8 @@ public class EntitlementMgrService implements IEntitlementMgr {
         mapper.enable(DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT);
         mapper.enable(DeserializationFeature.ACCEPT_EMPTY_ARRAY_AS_NULL_OBJECT);
 
-        File file = null;
-
-        Resource resource = new ClassPathResource("classpath:user_entitlements.json");
         try {
-            InputStream inputStream = resource.getInputStream();
+            InputStream inputStream = resourceFile.getInputStream();
             mapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
             List<User> users = mapper.readValue(inputStream,  new TypeReference<List<User>>() {
             });
@@ -71,7 +70,6 @@ public class EntitlementMgrService implements IEntitlementMgr {
 
     public Boolean isEntitled(List<Entitlement> userEntitlements, AuthorizationRequest req) {
         boolean hasAccess =false;
-//        if(userEntitlement == null) return false;
         for(String reqAccountId: req.getAccountIds()) {
             List<Operation> allowOps = getOperationsByAccount(reqAccountId, userEntitlements);
             if(allowOps != null) {
