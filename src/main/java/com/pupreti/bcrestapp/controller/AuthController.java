@@ -22,8 +22,6 @@ public class AuthController {
 
 	@PostMapping("/users/{userId}/authorize")
 	public ResponseEntity<?> authorize(@RequestBody AuthorizationRequest authRequest, @PathVariable String userId) {
-		System.out.println("userid: " + userId);
-		System.out.println();
 		Boolean hasAccess = entitlementMgr.validateEntitlementAccess(userId, authRequest);
 
 		if(hasAccess) {

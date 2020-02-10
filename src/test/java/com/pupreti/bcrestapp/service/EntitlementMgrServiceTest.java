@@ -29,27 +29,27 @@ public class EntitlementMgrServiceTest {
         MockitoAnnotations.initMocks(this);
     }
 
-//    @Test
-//    public void testValidateEntitlementAccessReturnsTrue() {
-//
-//        AuthorizationRequest req = new AuthorizationRequest();
-//        List<String> accounts = new ArrayList<String>();
-//        accounts.add("account001");
-//        accounts.add("account005");
-//        req.setAccountIds(accounts);
-//        List<Operation> operations = new ArrayList<>();
-//        List<String> resources = new ArrayList<>();
-//        resources.add("video");
-//        Operation opr = new Operation();
-//        opr.setAction("WRITE");
-//        opr.setResources(resources);
-//        operations.add(opr);
-//        req.setOperations(operations);
-//
-//        boolean hasAccess = entitlementMgrService.validateEntitlementAccess("user001", req);
-//        assert(hasAccess==true);
-//    }
-//
+    @Test
+    public void testValidateEntitlementAccessReturnsTrue() {
+
+        AuthorizationRequest req = new AuthorizationRequest();
+        List<String> accounts = new ArrayList<String>();
+        accounts.add("account001");
+        accounts.add("account005");
+        req.setAccountIds(accounts);
+        List<Operation> operations = new ArrayList<>();
+        List<String> resources = new ArrayList<>();
+        resources.add("video");
+        Operation opr = new Operation();
+        opr.setAction("WRITE");
+        opr.setResources(resources);
+        operations.add(opr);
+        req.setOperations(operations);
+
+        boolean hasAccess = entitlementMgrService.validateEntitlementAccess("user001", req);
+        assert(hasAccess==true);
+    }
+
     @Test
     public void testValidateEntitlementAccessReturnsFalse() {
         AuthorizationRequest req = new AuthorizationRequest();
